@@ -15,7 +15,15 @@ todo-backend/.vscode/
 todo-backend/test.db
 todo-backend/.idea/
 
+# Optional: compiled shared libraries
+todo-backend/**/*.so
 
+# === Node (Angular) ===
+todo-frontend/node_modules/
+todo-frontend/dist/
+todo-frontend/.angular/cache/
+todo-frontend/.vscode/
+todo-frontend/.env
 
 # === OS + Editor junk ===
 *.swp
