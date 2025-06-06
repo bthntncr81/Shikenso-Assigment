@@ -36,7 +36,7 @@ This is the frontend for the To-Do List Management System, built using **Angular
 ### 1. Navigate to frontend
 
 ```bash
-cd todo-fullstack/todo-frontend
+cd todo-frontend
 npm install
 ng serve
 ```

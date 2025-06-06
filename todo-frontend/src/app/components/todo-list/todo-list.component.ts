@@ -44,6 +44,7 @@ export class TodoListComponent implements OnInit {
   }
 
   toggleComplete(todo: ToDo) {
+    event?.preventDefault();
     this.todoService.updateTodo(todo).subscribe({
       next: () => {
         this.toast.show('success', 'To-Do updated!');

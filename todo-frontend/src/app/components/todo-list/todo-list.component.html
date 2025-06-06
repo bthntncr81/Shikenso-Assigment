@@ -4,7 +4,7 @@
   <div class="sort-toggle">
     <label>Sort by Due Date:</label>
     <button class="sort-button" (click)="toggleSort()">
-      {{ sortDirection === 'asc' ? '↑ Ascending' : '↓ Descending' }}
+      {{ sortDirection === "asc" ? "↑ Ascending" : "↓ Descending" }}
     </button>
   </div>
 
@@ -15,21 +15,31 @@
   </select>
 </div>
 
-<ul>
-  <li *ngFor="let todo of filteredTodos" class="todo-item" (click)="toggleDetails(todo.id!)">
-    <input type="checkbox" [(ngModel)]="todo.completed" (click)="toggleComplete(todo); $event.stopPropagation()" />
+<div class="row">
+  <div class="col-md-6" *ngFor="let todo of filteredTodos">
+    <div class="todo-item" (click)="toggleDetails(todo.id!)">
+      <input
+        type="checkbox"
+        [(ngModel)]="todo.completed"
+        (ngModelChange)="toggleComplete(todo)"
+        (click)="$event.stopPropagation()"
+      />
 
-    <div class="content">
-      <strong>{{ todo.title }}</strong>
+      <div class="content">
+        <strong>{{ todo.title }}</strong>
 
-      <div class="details" *ngIf="showDetailsMap[todo.id!]">
-        <small *ngIf="todo.description">{{ todo.description }}</small><br *ngIf="todo.description" />
-        <small *ngIf="todo.due_date">Due: {{ todo.due_date | date: 'short' }}</small>
+        <div class="details" *ngIf="showDetailsMap[todo.id!]">
+          <small *ngIf="todo.description">{{ todo.description }}</small
+          ><br *ngIf="todo.description" />
+          <small *ngIf="todo.due_date"
+            >Due: {{ todo.due_date | date : "short" }}</small
+          >
+        </div>
       </div>
-    </div>
 
-    <button (click)="deleteTodo(todo.id!); $event.stopPropagation()">
-      Delete
-    </button>
-  </li>
-</ul>
+      <button (click)="deleteTodo(todo.id!); $event.stopPropagation()">
+        Delete
+      </button>
+    </div>
+  </div>
+</div>
