@@ -29,7 +29,6 @@ This is the backend for the To-Do List Management System, built using **FastAPI*
 ### 1. Clone the project
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/todo-fullstack.git
 cd todo-backend
 python -m venv venv
 source venv/bin/activate      # Windows: venv\Scripts\activate
