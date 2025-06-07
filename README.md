@@ -1,81 +1,65 @@
-# 🧠 Backend – FastAPI To-Do API
+# Backend – FastAPI To-Do API
 
-This is the backend for the To-Do List Management System, built using **FastAPI**, **SQLAlchemy**, and **SQLite**.
+This directory contains the backend for the To-Do List Management System. It is built with FastAPI and SQLAlchemy, using SQLite for data storage. The backend exposes a RESTful API to be consumed by the Angular frontend.
 
----
+## Features
 
-## ✅ Features
+- List all to-do items
+- Add a new to-do item
+- Update an existing to-do item
+- Delete a to-do item
+- File-based SQLite database
+- CORS enabled for frontend integration
 
-- ✅ Get all to-do items
-- ✅ Create a new to-do item
-- ✅ Update an existing item
-- ✅ Delete an item
-- ✅ File-based SQLite DB for persistence
-- ✅ CORS enabled for frontend integration
-
----
-
-## 📦 Tech Stack
+## Tech Stack
 
 - FastAPI
 - SQLAlchemy
 - SQLite
-- Uvicorn (ASGI server)
+- Uvicorn
 
----
+## Getting Started
 
-## 🚀 Getting Started
-
-### 1. Clone the project
-
-```bash
+````bash
 cd todo-backend
 python -m venv venv
-source venv/bin/activate      # Windows: venv\Scripts\activate
+source venv/bin/activate        # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 uvicorn app.main:app --reload
-```
+
+
 
 ---
 
-# 🧠 FrontEnd – Angular To-Do APP
+### ✅ `todo-frontend/README.md`
 
-````markdown
-# 🎨 Frontend – Angular To-Do App
+```markdown
+# Frontend – Angular To-Do Application
 
-This is the frontend for the To-Do List Management System, built using **Angular 17**, **SCSS**, and **Reactive Forms**.
+This directory contains the frontend for the To-Do List Management System, built with Angular 17. It interacts with the FastAPI backend to manage task items.
 
----
+## Features
 
-## ✅ Features
+- Display to-do items
+- Add new items via a form
+- Mark items as complete or incomplete
+- Delete items
+- Filter: All / Completed / Open
+- Search by title
+- Sort by due date (ascending/descending)
+- Page routing between list and form views
 
-- ✅ Display list of to-do items
-- ✅ Add new item via form
-- ✅ Mark item as completed/incomplete
-- ✅ Delete an item
-- ✅ Filter: All / Completed / Open
-- ✅ Search by title
-- ✅ Sort by due date
-- ✅ Routing between list and add form
+## Angular Modules Used
 
----
+- HttpClientModule
+- FormsModule
+- ReactiveFormsModule
+- RouterModule
 
-## 🌐 Angular Modules Used
-
-- `HttpClientModule`
-- `FormsModule`
-- `ReactiveFormsModule`
-- `RouterModule`
-
----
-
-## 🚀 Getting Started
-
-### 1. Navigate to frontend
+## Getting Started
 
 ```bash
 cd todo-frontend
 npm install
 ng serve
-```
 ````
