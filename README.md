@@ -10,36 +10,6 @@ This directory contains the backend for the To-Do List Management System. It is 
 - Delete a to-do item
 - File-based SQLite database
 - CORS enabled for frontend integration
-
-## Tech Stack
-
-- FastAPI
-- SQLAlchemy
-- SQLite
-- Uvicorn
-
-## Getting Started
-
-````bash
-cd todo-backend
-python -m venv venv
-source venv/bin/activate        # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-uvicorn app.main:app --reload
-
-
-
----
-
-### ✅ `todo-frontend/README.md`
-
-```markdown
-# Frontend – Angular To-Do Application
-
-This directory contains the frontend for the To-Do List Management System, built with Angular 17. It interacts with the FastAPI backend to manage task items.
-
-## Features
-
 - Display to-do items
 - Add new items via a form
 - Mark items as complete or incomplete
@@ -49,14 +19,22 @@ This directory contains the frontend for the To-Do List Management System, built
 - Sort by due date (ascending/descending)
 - Page routing between list and form views
 
-## Angular Modules Used
+## Tech Stack
 
-- HttpClientModule
-- FormsModule
-- ReactiveFormsModule
-- RouterModule
+- FastAPI
+- SQLAlchemy
+- SQLite
+- Uvicorn
+- Angular
 
 ## Getting Started
+
+````bash
+cd todo-backend
+python -m venv venv
+source venv/bin/activate        # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn app.main:app --reload
 
 ```bash
 cd todo-frontend
