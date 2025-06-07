@@ -29,15 +29,13 @@ This directory contains the backend for the To-Do List Management System. It is 
 
 ## Getting Started
 
-````bash
+```bash
 cd todo-backend
 python -m venv venv
 source venv/bin/activate        # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 uvicorn app.main:app --reload
-
-```bash
 cd todo-frontend
 npm install
 ng serve
-````
+```
