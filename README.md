@@ -30,11 +30,14 @@ This directory contains the backend for the To-Do List Management System. It is 
 ## Getting Started
 
 ```bash
+# Start the backend (FastAPI)
 cd todo-backend
 python -m venv venv
 source venv/bin/activate        # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 uvicorn app.main:app --reload
+
+#  Open a new terminal and start the frontend (Angular)
 cd todo-frontend
 npm install
 ng serve
